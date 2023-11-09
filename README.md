@@ -1,6 +1,4 @@
-### Hi there 👋
+### Hi there
 
-- 🔭 I’m currently working on a roblox script hub
-- 📫 How to reach me: dont
+- 📫 How to reach me: discord: zeme#0001
 - 😄 Pronouns: he/him
-- ⚡ Fun fact: im white
