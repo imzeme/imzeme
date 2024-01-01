@@ -1,138 +1,127 @@
 status:
     offline:
-        base: '&c{SERVER} is {STATUS}. &7You are in position &f{POS}&7 of &f{LEN}&7.'
+        base: '&c{SERVER} jest {STATUS}. &7Jesteś na pozycji &f{POS}&7 z &f{LEN}&7.'
         offline: offline
-        restarting: restarting
-        full: full
-        restricted: restricted
-        paused: paused
-        whitelisted: whitelisted
+        restarting: restartuje
+        full: pełny
+        restricted: ograniczony
+        paused: wstrzymany
+        whitelisted: z listy białej
     online:
-        base: '&7You are in position &f{POS}&7 of &f{LEN}&7. Estimated time: {TIME}'
-    left-last-queue: '&aYou left the last queue you were in.'
+        base: '&7Jesteś na pozycji &f{POS}&7 z &f{LEN}&7. Szacowany czas: {TIME}'
+    left-last-queue: '&aOpuściłeś ostatnią kolejkę, w której byłeś.'
     now-in-queue: |-
-        &aYou are now queued for {SERVER}! &7You are in position &f{POS}&7 of &f{LEN}&7.
-        &7Type &f/leavequeue&7 or &f<click:run_command:/leavequeue {SERVERNAME}>click here</click>&7 to leave the queue!
+        &aAktualnie jesteś w kolejce na serwer {SERVER}! &7Jesteś na pozycji &f{POS}&7 z &f{LEN}&7.
+        &7Wpisz &f/leavequeue&7 albo &f<click:run_command:/leavequeue {SERVERNAME}>kliknij tutaj</click>&7, aby opuścić kolejkę!
     now-in-empty-queue: ''
-    sending-now: '&aSending you to &f{SERVER} &anow..'
-    making-room: <gold>Making room for you..
-    priority-increased: <gold>You now have higher priority! <green>Moving you up in
-        the queue..
+    sending-now: '&aWysyłam cię teraz na serwer &f{SERVER}&a..'
+    making-room: <gold>Tworzę miejsce dla ciebie..
+    priority-increased: <gold>Teraz masz wyższy priorytet! <green>Przesuwam cię w górę w kolejce..
 errors:
-    server-not-exist: '&cThe server {SERVER} does not exist!'
-    already-queued: '&cYou are already queued for that server!'
-    player-only: '&cThis command can only be executed as a player!'
-    already-connected: '&cYou are already connected to this server!'
-    cant-join-paused: '&cYou cannot join the queue for {SERVER} because it is paused.'
-    deny-joining-from-server: '&cYou are not allowed to join queues from this server!'
+    server-not-exist: '&cSerwer {SERVER} nie istnieje!'
+    already-queued: '&cJesteś już w kolejce do tego serwera!'
+    player-only: '&cTa komenda może być wykonywana tylko przez gracza!'
+    already-connected: '&cJesteś już połączony z tym serwerem!'
+    cant-join-paused: '&cNie możesz dołączyć do kolejki na serwer {SERVER}, ponieważ jest wstrzymany.'
+    deny-joining-from-server: '&cNie możesz dołączać do kolejek z tego serwera!'
     wrong-version:
-        base: <red>You must be on {VERSIONS} to join this server!
-        or: ' or '
+        base: <red>Musisz być na wersji {VERSIONS}, aby dołączyć do tego serwera!
+        or: ' lub '
         comma: ', '
-    too-fast-queue: <red>You're queueing too fast!
-    kicked-to-make-room: <red>You were moved to the lobby to make room for another
-        player.
+    too-fast-queue: <red>Dołączasz do kolejki zbyt szybko!
+    kicked-to-make-room: <red>Zostałeś przeniesiony do lobby, aby zrobić miejsce dla innego gracza.
     make-room-failed:
-        player: <red>Failed to make room for you in that server.
-        admin: <red>Failed to make room for you in that server. Check the console
-            for more information.
+        player: <red>Nie udało się zrobić dla ciebie miejsca na tym serwerze.
+        admin: <red>Nie udało się zrobić dla ciebie miejsca na tym serwerze. Sprawdź konsolę, aby uzyskać więcej informacji.
 commands:
-    leave-queue: '&aYou left the queue for {SERVER}!'
-    reload: '&aConfig and messages reloaded successfully!'
+    leave-queue: '&aOpuściłeś kolejkę do {SERVER}!'
+    reload: '&aKonfiguracja i wiadomości zostały pomyślnie przeładowane!'
     joinqueue:
-        usage: '&cUsage: /joinqueue <server>'
+        usage: '&cUżycie: /joinqueue <serwer>'
     kick:
-        usage: '<red>Usage: /ajqueue kick <player> [queue]'
-        no-player: '&cCould not find {PLAYER}! Make sure they are in a queue!'
-        unknown-server: '&cCould not find queue {QUEUE}. Make sure you spelled it
-            correctly!'
-        success: <green>Kicked <white>{PLAYER} <green>from {NUM} queue{s}!
+        usage: '<red>Użycie: /ajqueue kick <gracz> [kolejka]'
+        no-player: '&cNie można znaleźć {PLAYER}! Upewnij się, że są w kolejce!'
+        unknown-server: '&cNie można znaleźć kolejki {QUEUE}. Upewnij się, że wpisałeś to poprawnie!'
+        success: <green>Wyrzucono <white>{PLAYER} <green>z kolejki {NUM} gracz{a/s}!
     kickall:
-        usage: '<red>Usage: /ajqueue kickall <queue>'
-        success: <green>Kicked <white>{NUM} <green>player{s} from <white>{SERVER}<green>!
+        usage: '<red>Użycie: /ajqueue kickall <kolejka>'
+        success: <green>Wyrzucono <white>{NUM} <green>graczy z kolejki <white>{SERVER}<green>!
     pausequeueserver:
-        unpaused: <green>You are no longer paused! <gray>You can now use queue-servers
-            normally.
-        paused: <green>You are now paused! <gray>You will no longer be sent using
-            queue-servers.
-        reminder: '<gold>Reminder: <yellow>You are currently paused for queue-servers,
-            so you will not be sent using them!<gray> Use <white>/ajQueue pausequeueserver</white>
-            to un-pause and return to normal behaviour'
+        unpaused: <green>Teraz nie jesteś wstrzymany! <gray>Możesz teraz normalnie używać serwerów kolejkowych.
+        paused: <green>Teraz jesteś wstrzymany! <gray>Nie będziesz teraz wysyłany za pomocą serwerów kolejek.
+        reminder: '<gold>Przypomnienie: <yellow>Jesteś obecnie wstrzymany dla serwerów kolejek, więc nie będziesz wysyłany za ich pomocą!<gray> Użyj <white>/ajQueue pausequeueserver</white> aby zakończyć wstrzymanie i wrócić do normalnego zachowania.'
     leave:
-        more-args: '&cPlease specify which queue you want to leave! &7You are in these
-            queues: {QUEUES}'
+        more-args: '&cOkreśl, z jakiej kolejki chcesz wyjść! &7Jesteś w tych kolejkach: {QUEUES}'
         queues-list-format: '&f{NAME}&7, '
-        not-queued: '&cYou are not queued for that server! &7You are in these queues:
-            {QUEUES}'
-        no-queues: '&cYou are not queued!'
+        not-queued: '&cNie jesteś w kolejce do tego serwera! &7Jesteś w tych kolejkach: {QUEUES}'
+        no-queues: '&cNie jesteś w kolejce!'
     pause:
-        more-args: '&cUsage: /ajqueue pause <server> [on/off]'
-        no-server: '&cThat server does not exist!'
-        success: '&aThe queue for &f{SERVER} &ais now {PAUSED}'
+        more-args: '&cUżycie: /ajqueue pause <serwer> [wł./wył.]'
+        no-server: '&cTen serwer nie istnieje!'
+        success: '&aKolejka dla &f{SERVER} &azostała teraz {PAUSED}'
         paused:
-            'true': '&epaused'
-            'false': '&aun-paused'
+            'true': '&ezawieszona'
+            'false': '&aodwieszona'
     send:
-        player-not-found: '&cThat player could not be found. Make sure they are online!'
-        usage: '<red>Usage: /ajqueue send <player> <server>'
+        player-not-found: '&cNie można znaleźć tego gracza. Upewnij się, że są online!'
+        usage: '<red>Użycie: /ajqueue send <gracz> <serwer>'
     listqueues:
-        header: '&9Queues:'
+        header: '&9Kolejki:'
         format: '<hover:show_text:''&7Status: {STATUS}''>{COLOR}{NAME}&7: {COUNT}
-            queued</hover>'
-noperm: '&cYou do not have permission to do this!'
+            w kolejce</hover>'
+noperm: '&cNie masz uprawnień, aby to zrobić!'
 format:
     time:
         mins: '{m}m {s}s'
-        secs: '{s} seconds'
+        secs: '{s} sekund'
 list:
     format: '&b{SERVER} &7({COUNT}): {LIST}'
     playerlist: '&9{NAME}&7, '
-    total: '&7Total players in queues: &f{TOTAL}'
-    none: '&7None'
+    total: '&7Łączna liczba graczy w kolejkach: &f{TOTAL}'
+    none: '&7Brak'
 spigot:
     actionbar:
-        online: '&7You are queued for &f{SERVER}&7. You are in position &f{POS}&7
-            of &f{LEN}&7. Estimated time: {TIME}'
-        offline: '&7You are queued for &f{SERVER}&7. &7You are in position &f{POS}&7
-            of &f{LEN}&7.'
-send: '&aAdded &f{PLAYER}&a to the queue for &f{SERVER}'
-remove: '&aRemoved &f{PLAYER} from all queues they were in.'
+        online: '&7Jesteś w kolejce do &f{SERVER}&7. Jesteś na pozycji &f{POS}&7
+            z &f{LEN}&7. Szacowany czas: {TIME}'
+        offline: '&7Jesteś w kolejce do &f{SERVER}&7. &7Jesteś na pozycji &f{POS}&7
+            z &f{LEN}&7.'
+send: '&aDodano gracza &f{PLAYER}&a do kolejki na serwer &f{SERVER}'
+remove: '&aUsunięto gracza &f{PLAYER} ze wszystkich kolejek, w których był.'
 placeholders:
     queued:
-        none: None
+        none: Żaden
     position:
-        none: None
+        none: Żaden
     estimated_time:
-        none: None
+        none: Żaden
     status:
         online: '&aOnline'
         offline: '&cOffline'
-        restarting: '&cRestarting'
-        full: '&eFull'
-        restricted: '&eRestricted'
-        paused: '&ePaused'
-        whitelisted: '&eWhitelisted'
+        restarting: '&cRestartuje'
+        full: '&ePełny'
+        restricted: '&eOgraniczony'
+        paused: '&eWstrzymany'
+        whitelisted: '&eZ listy białej'
 title:
     title: ''
-    subtitle: <gold>You are <green>#{POS} <gold>in the queue!
+    subtitle: <gold>Jesteś na pozycji <green>#{POS} <gold>w kolejce!
     sending-now:
         title: ''
-        subtitle: <green>Sending you to <white>{SERVER} <green>now..
-max-tries-reached: '&cUnable to connect to {SERVER}. Max retries reached.'
-auto-queued: '&aYou''ve been auto-queued for {SERVER} because you were kicked.'
-velocity-kick-message: '<red>You were kicked while trying to join {SERVER}: <white>{REASON}'
+        subtitle: <green>Wysyłam cię teraz na <white>{SERVER} <green>..
+max-tries-reached: '&cNie można połączyć się z {SERVER}. Osiągnięto maksymalną liczbę prób.'
+auto-queued: '&aZostałeś automatycznie włączony do kolejki na {SERVER}, ponieważ zostałeś wyrzucony.'
+velocity-kick-message: '<red>Zostałeś wyrzucony podczas próby dołączenia do {SERVER}: <white>{REASON}'
 updater:
     update-available: |-
         <gray><strikethrough>                                                         <reset>
-          <green>An update is available for ajQueue!
-          <dark_green>You can download it by <click:run_command:/ajqueue update><bold>clicking here</bold>
-            or running <gray>/ajQueue update</click>
+          <green>Jest dostępna aktualizacja dla ajQueue!
+          <dark_green>Możesz ją pobrać, <click:run_command:/ajqueue update><bold>klikając tutaj</bold>
+            lub wykonując <gray>/ajQueue update</click>
         <gray><strikethrough>                                                         <reset>
-    no-update: <red>There is not an update available
-    success: <green>The update has been downloaded! Now just restart the server
-    fail: <red>An error occurred while downloading the update. Check the console for
-        more info.
-    already-downloaded: <red>The update has already been downloaded.
+    no-update: <red>Nie ma dostępnej aktualizacji
+    success: <green>Aktualizacja została pobrana! Teraz wystarczy zrestartować serwer
+    fail: <red>Wystąpił błąd podczas pobierania aktualizacji. Sprawdź konsolę, aby uzyskać więcej informacji.
+    already-downloaded: <red>Aktualizacja została już pobrana.
 protocol-names:
     '763': 1.20.1
     '762': 1.19.4
