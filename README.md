@@ -1,6 +1,8 @@
-### Hi there
+### Hiya!
 
-- 📫 How to reach me: discord: zeme#0001
+- 🔭 I’m currently working on [LeFinesé](https://www.roblox.com/groups/34181118/LeFinese#!/about)
+- 🌱 I’m currently learning LUA
+- - 📫 How to reach me: [Discord](https://discord.com/users/544907492342366229)
 - 😄 Pronouns: he/him
 
 
