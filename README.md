@@ -1,7 +1,7 @@
 ### Hiya!
 
-- 🔭 I’m currently working on [LeFinesé](https://www.roblox.com/groups/34181118/LeFinese#!/about)
-- 🌱 I’m currently learning LUA
+- 🔭 I’m currently working on something.
+- 🌱 I’m currently learning LUA & C#.
 - 📫 How to reach me: [Discord](https://discord.com/users/544907492342366229)
 - 😄 Pronouns: he/him
 
