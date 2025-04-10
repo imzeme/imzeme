@@ -7,6 +7,7 @@
 
 ## Status:
 ![status](https://api.statusbadges.me/badge/status/544907492342366229?style=for-the-badge) ![playing](https://api.statusbadges.me/badge/playing/544907492342366229?style=for-the-badge)
+
 [![spotify](https://api.statusbadges.me/badge/spotify/544907492342366229?style=for-the-badge)](https://api.statusbadges.me/openspotify/544907492342366229) ![vscode](https://api.statusbadges.me/badge/vscode/544907492342366229?style=for-the-badge)
 
 
