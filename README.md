@@ -1,4 +1,4 @@
-### Hiya!
+### Hey, I'm zeme! 👋
 
 - 🔭 I’m currently working on something.
 - 🌱 I’m currently learning LUA & C#.
