@@ -1,4 +1,4 @@
-### Hey, I'm zeme! 👋
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Welcome+to+my+GitHub+profile!;Hello!+I%E2%80%99m+zeme.)](https://git.io/typing-svg)
 
 - 🔭 I’m currently working on something.
 - 🌱 I’m currently learning LUA & C#.
